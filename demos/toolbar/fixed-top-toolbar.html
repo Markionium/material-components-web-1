@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+  Copyright 2016 Google Inc. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      https://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MDC Toolbar Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+      .mdc-toolbar-demo {
+        margin: 0px;
+      }
+      .demo-paragraph {
+        margin: 0px;
+        padding: 20px 16px;
+      }
+    </style>
+    <script src="../assets/material-components-web.css.js" charset="utf-8"></script>
+  </head>
+  <body class="mdc-typography mdc-toolbar-demo">
+    <main>
+      <div class="mdc-toolbar mdc-toolbar--fixed">
+        <div class="mdc-toolbar__section mdc-toolbar__section--align-start">
+          <span class="mdc-toolbar__title">Title</span>
+        </div>
+        <div class="mdc-toolbar__section mdc-toolbar__section--align-end">
+          <section class="mdc-theme--dark">
+            <i class="mdc-icon-toggle material-icons"
+               role="button"
+               aria-label="Add to favorites"
+               aria-pressed="false"
+               tabindex="0"
+               data-toggle-on='{"content": "favorite", "label": "Remove From Favorites"}'
+               data-toggle-off='{"content": "favorite_border", "label": "Add to Favorites"}'>
+              favorite_border
+            </i>
+          </section>
+        </div>
+      </div>
+      <div class="mdc-toolbar__fixed-adjust">
+        <p class="demo-paragraph">
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+        </p>
+        <p class="demo-paragraph">
+          Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est.
+        </p>
+      </div>
+    </main>
+    <script src="../assets/material-components-web.js" charset="utf-8"></script>
+    <script>
+      (function() {
+        'use strict';
+
+        var nodes = document.querySelectorAll('.mdc-icon-toggle');
+        for (var i = 0, node; node = nodes[i]; i++) {
+          mdc.iconToggle.MDCIconToggle.attachTo(node);
+        }
+      })();
+    </script>
+  </body>
+</html>
